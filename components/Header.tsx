@@ -1,7 +1,9 @@
-import type { NextPage } from 'next';
 import Link from 'next/link';
+import { ReactElement } from 'react';
 
-const Header: NextPage = () => {
+type NextComponent = () => ReactElement;
+
+const Header: NextComponent = () => {
   return (
     <nav>
       <div className="logo">
