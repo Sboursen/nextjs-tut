@@ -3,7 +3,7 @@
 body {
   background: #f2f2f2;
   color: #333;
-  font-family: "Nunito";
+  font-family: 'Nunito';
 }
 a {
   color: #333;
@@ -34,4 +34,12 @@ footer {
   margin-top: 60px;
   color: #777;
   border-top: 1px solid #eaeaea;
+}
+
+.not-found {
+  text-align: center;
+}
+.not-found a {
+  color: #4979ff;
+  text-decoration: underline;
 }
