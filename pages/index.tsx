@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css';
+
 
 const Home: NextPage = () => {
   return (
     <div>
+      <Header />
       <h1 className={styles.container}>Hello Next</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
@@ -19,6 +21,7 @@ const Home: NextPage = () => {
         suscipit perspiciatis eligendi veritatis dolores animi deleniti expedita
         ipsum non magni commodi.
       </p>
+      <Footer />
     </div>
   );
 };

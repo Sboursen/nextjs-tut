@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
+import Header from "../components/Header";
+import Footer from '../components/Footer';
 
 const About: NextPage = () => {
   return (
     <div>
+      <Header />
       <h1>About</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
@@ -16,6 +19,7 @@ const About: NextPage = () => {
         suscipit perspiciatis eligendi veritatis dolores animi deleniti expedita
         ipsum non magni commodi.
       </p>
+      <Footer />
     </div>
   );
 };
