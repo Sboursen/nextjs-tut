@@ -1,4 +1,5 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
+import styles from '../../styles/ninjas.module.css';
 
 type Primitive = boolean | number | string | null;
 type JSONArray = JSONValue[];
@@ -32,9 +33,13 @@ const Ninjas: NextPage = ({
     <div>
       <h1>All Ninjas</h1>
       <ul>
-        {users.map((user: User) => {
-          return <li key={user.id}>{user.name}</li>;
-        })}
+        {users.map((user: User) => (
+          <li key={user.id}>
+            <a className={styles.single}>
+              <h3>{user.name}</h3>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
