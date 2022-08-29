@@ -1,22 +1,11 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import styles from '../../styles/ninjas.module.css';
 import Link from 'next/link';
+import { JSONObject, User } from '../../types';
 
-type Primitive = boolean | number | string | null;
-type JSONArray = JSONValue[];
-type JSONObject = { [key: string]: JSONValue };
-type JSONValue = JSONObject | JSONArray | Primitive;
 
-interface User {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: JSONObject;
-  phone: string;
-  website: string;
-  company: JSONObject;
-}
+
+
 
 export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
