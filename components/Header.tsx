@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { ReactElement } from 'react';
 import Image from 'next/image';
-
-type NextComponent = () => ReactElement;
+import { NextComponent } from '../types';
 
 const Header: NextComponent = () => {
   return (
