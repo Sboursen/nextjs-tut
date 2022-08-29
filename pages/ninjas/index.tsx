@@ -1,5 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import styles from '../../styles/ninjas.module.css';
+import Link from 'next/link';
 
 type Primitive = boolean | number | string | null;
 type JSONArray = JSONValue[];
@@ -35,9 +36,11 @@ const Ninjas: NextPage = ({
       <ul>
         {users.map((user: User) => (
           <li key={user.id}>
-            <a className={styles.single}>
-              <h3>{user.name}</h3>
-            </a>
+            <Link href={`/ninjas/${user.id}`}>
+              <a className={styles.single}>
+                <h3>{user.name}</h3>
+              </a>
+            </Link>
           </li>
         ))}
       </ul>
