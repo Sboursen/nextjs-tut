@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 type NextComponent = () => ReactElement;
 
@@ -7,6 +8,13 @@ const Header: NextComponent = () => {
   return (
     <nav>
       <div className="logo">
+        <Image
+          src={'/favicon.ico'}
+          width={48}
+          height={48}
+          objectFit="contain"
+          alt="logo"
+        ></Image>
         <h1>Ninja List</h1>
       </div>
       <Link href="/">
